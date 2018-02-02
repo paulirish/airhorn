@@ -25,13 +25,13 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open('airhorner').then(cache => {
       return cache.addAll([
-        `/`,
-        `/index.html?timestamp=${timeStamp}`,
-        `/styles/main.css?timestamp=${timeStamp}`,
-        `/scripts/main.min.js?timestamp=${timeStamp}`,
-        `/scripts/comlink.global.js?timestamp=${timeStamp}`,
-        `/scripts/messagechanneladapter.global.js?timestamp=${timeStamp}`,
-        `/sounds/djairhornshort.mp3?timestamp=${timeStamp}`
+        `./`,
+        `./index.html?timestamp=${timeStamp}`,
+        `./styles/main.css?timestamp=${timeStamp}`,
+        `./scripts/main.min.js?timestamp=${timeStamp}`,
+        `./scripts/comlink.global.js?timestamp=${timeStamp}`,
+        `./scripts/messagechanneladapter.global.js?timestamp=${timeStamp}`,
+        `./sounds/djairhornshort.mp3?timestamp=${timeStamp}`
       ])
       .then(() => self.skipWaiting());
     })
